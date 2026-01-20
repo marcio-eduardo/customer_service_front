@@ -3,8 +3,10 @@ import { Helmet } from 'react-helmet-async';
 import { useNavigate, useSearchParams } from 'react-router-dom';
 import { api } from '../../lib/axios';
 import { useAuth } from '../../contexts/AuthContext';
+
 import type { Company } from '../../types/Company';
 import type { User } from '../../types/User';
+
 
 interface Ticket {
     id: number;
@@ -56,8 +58,9 @@ export function TicketsPage() {
     const [isLoading, setIsLoading] = useState(true);
     const [error, setError] = useState<string | null>(null);
     const navigate = useNavigate();
-    const { user } = useAuth();
 
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    const { user } = useAuth();
     // Filters
     const [searchParams, setSearchParams] = useSearchParams();
 
