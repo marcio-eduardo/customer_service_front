@@ -64,8 +64,7 @@ export function NavigationBar() {
   const isCompanyUser = userRoles.includes('ROLE_COMPANY_USER');
 
 
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const canManageTickets = isTechUser || isModerator;
+  // const _canManageTickets = isTechUser || isModerator;
   const toggleMobileMenu = () => setIsMobileMenuOpen(!isMobileMenuOpen);
   const handleLinkClick = () => setIsMobileMenuOpen(false);
 

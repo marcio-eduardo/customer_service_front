@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { useNavigate, useSearchParams } from 'react-router-dom';
 import { api } from '../../lib/axios';
-import { useAuth } from '../../contexts/AuthContext';
+// import { useAuth } from '../../contexts/AuthContext';
 
 import type { Company } from '../../types/Company';
 import type { User } from '../../types/User';
@@ -59,8 +59,7 @@ export function TicketsPage() {
     const [error, setError] = useState<string | null>(null);
     const navigate = useNavigate();
 
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    const { user } = useAuth();
+    // const { user: _user } = useAuth();
     // Filters
     const [searchParams, setSearchParams] = useSearchParams();
 
